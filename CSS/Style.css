@@ -1,0 +1,380 @@
+/* 3.a.ii. Google Fonts importadas en index.html */
+/* 3.a.ii. Estilos base con Google Fonts */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente principal */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+h1, h2, h3 {
+    font-family: 'Open Sans', sans-serif; /* Fuente para títulos */
+    color: #007bff;
+}
+
+/* --- 3.a.i. Estilos Básicos: Header --- */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+/* --- 3.a.i. Estilos Básicos: Nav --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Estilos de Main y Sections */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- 3.b. Propiedades de background (Degradado) --- */
+.hero {
+    /* Fondo con degradado lineal */
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+/* --- 4.a. Sección "Productos" con Flexbox --- */
+#productos h2 {
+    text-align: center;
+}
+
+.productos-container {
+    display: flex; /* Uso de Flexbox */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centrado en caso de menos elementos */
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    width: 300px; /* Ancho base */
+    flex-grow: 1; /* Permite crecer */
+    flex-basis: 300px; /* Define el tamaño base para que Flexbox distribuya */
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* --- 4.b. Sección "Reseñas" con Grid --- */
+#reseñas {
+    background-color: #e9ecef;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+#reseñas h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reseñas-grid {
+    display: grid; /* Uso de Grid */
+    /* Distribución en 4 columnas en pantallas grandes, con espacio entre ellas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+.reseña {
+    background-color: #b6e6fc;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.reseña p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.reseña span {
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    color: #555;
+}
+
+/* --- 5.a. Estilos para Multimedia --- */
+.multimedia-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.media-item {
+    flex: 1 1 45%; /* Permite que los elementos se repartan el espacio */
+    max-width: 550px;
+}
+
+.multimedia-content img {
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 50%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- 4.c. Sección "Contacto" con Media Queries para Responsivo --- */
+#contacto {
+    background-color: #b6e6fc;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacto h2 {
+    text-align: center;
+}
+
+.contacto-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3700ff;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contacto-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacto-form button:hover {
+    background-color: #1e7e34;
+}
+
+/* --- 4.c. Media Queries para Contacto (y Responsividad general) --- */
+
+/* Pantallas Medianas (ej. tabletas) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    /* Contacto: Ocupa todo el ancho */
+    .contacto-form {
+        max-width: 90%; 
+    }
+    
+    .multimedia-content {
+        flex-direction: column;
+    }
+
+    .media-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Pantallas Pequeñas (ej. móviles) */
+@media (max-width: 480px) {
+    /* Header/Nav: Lista de navegación vertical para mejor toque */
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    nav a {
+        display: block;
+        padding: 8px;
+    }
+    
+    /* Productos (Flexbox): Una columna */
+    .productos-container {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    /* Reseñas (Grid): Una columna */
+    .reseñas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contacto: Padding reducido */
+    #contacto {
+        padding: 20px;
+    }
+}
+
+
+/* --- 3.a.i. Estilos Básicos: Footer --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+/* Estilos para el Logo */
+.logo-container {
+    /* Permite centrar el logo si es necesario y controla su tamaño */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ajusta según dónde quieras el logo */
+    padding: 10px 0;
+}
+
+.logo {
+    /* Define el tamaño máximo del logo en el encabezado */
+    max-height: 120px; /* Puedes ajustarlo a tus necesidades */
+    width: auto;
+}
+
+/* Estilos para la Nueva Sección de Nosotros (Descripción) */
+#nosotros {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f8f8; /* Color de fondo suave para destacar */
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+#nosotros h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.descripcion-negocio {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.mision-valores {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.mision, .valores {
+    flex-basis: 48%; /* Ocupa casi la mitad del espacio */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.valores ul {
+    list-style: none;
+    padding: 0;
+}
+
+.valores li {
+    margin-bottom: 10px;
+    color: #007bff; /* Color azul para los valores */
+}

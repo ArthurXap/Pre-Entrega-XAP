@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizar - FenixPrint 3D</title>
+    <link rel="icon" href="../Fovicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>FenixPrint 3D</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="Productos.html">Catálogo</a></li>
+                <li><a href="Reseñas.html">Opiniones</a></li>
+                <li><a href="Contacto.html">Cotizar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contacto">
+            <h2>Cotiza Tu Proyecto 3D</h2>
+            <p>Envíanos tus requerimientos para una cotización personalizada. Si tienes el archivo STL, menciónalo en el mensaje.</p>
+            <form action="https://formspree.io/f/TU_ENDPOINT_FORMSPREE" method="POST" class="contacto-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="material">Material Preferido (Opcional):</label>
+                    <input type="text" id="material" name="material" placeholder="Ej: PLA, Resina, ABS">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Detalles del Proyecto / Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit">Solicitar Cotización</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Email: xap332@gmail.com | Teléfono: [123456789]</p>
+        <p>&copy; 2025 FenixPrint 3D. Tu Socio en Fabricación Aditiva.</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
